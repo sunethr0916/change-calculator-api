@@ -19,12 +19,13 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("com.adp.sample.demo")).paths(PathSelectors.any()).build();
+
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("User change calculator")
                 .description("Returns change for bills passed")
-                .contact(new Contact("Sunethra Duvvuru", "", "duvvuru.work@gmail.com"))
+                .contact(new Contact("Sunethra Duvvuru", "https://github.com/sunethr0916/change-calculator-api", "duvvuru.work@gmail.com"))
                 .build();
     }
 }
